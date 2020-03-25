@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {}
+
+.container img {
+    width: 400px;
+    height: 250px;
+}
+
+.country-det {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: start;
+}

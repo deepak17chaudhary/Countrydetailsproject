@@ -1,0 +1,24 @@
+<div class="country-container">
+    <h1>
+        Countries
+    </h1>
+    <ul>
+        <li *ngFor="let countryObj of countryListData">
+            <div class="country-flag">
+                <img src="{{countryObj?.flag}}" alt="flag">
+            </div>
+            <div class="country-info">
+                <h4>{{countryObj?.name}}</h4>
+                <span>Currency: {{countryObj?.currencies?.name}}</span> <br>
+                <span>Country date and Time : {{printDate()}}</span> <br>
+
+                <div class="buttons">
+                    <button type="button">Showmap</button>
+                    <button (click)="redirectToCountryDetailInfo(countryObj)">Details</button>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>

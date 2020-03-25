@@ -1,0 +1,43 @@
+<div class="container">
+    <div>
+        <h1>{{selectedCountry?.name}}</h1>
+
+        <span>
+        <img src="{{selectedCountry?.flag}}" alt="flag">
+    </span>
+    </div>
+    <div class="country-det">
+        <span>
+        Native Name: {{selectedCountry?.nativeName}}
+    </span>
+        <span>
+        Capital: {{selectedCountry?.capital}}
+    </span>
+        <span>
+        Population: {{selectedCountry?.population}}
+    </span>
+        <span>
+        Region: {{selectedCountry?.region}}
+    </span>
+        <span>
+        Sub-region: {{selectedCountry?.subregion}}
+    </span>
+        <span>
+        Area: {{selectedCountry?.area}}
+    </span>
+        <span>
+        CountryCode: {{selectedCountry?.countrycode}}
+    </span>
+        <span>
+        Languages: {{selectedCountry?.language}}
+    </span>
+        <span>
+        Currencies: {{selectedCountry?.countryObj?.currencies[0]?.name}}
+    </span>
+        <span>
+       Timezones: {{selectedCountry?.timezones}}
+    </span>
+
+    </div>
+
+</div>

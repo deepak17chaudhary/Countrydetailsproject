@@ -1,0 +1,41 @@
+.country-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+
+button {
+    border: 1px solid blue;
+    color: blue;
+    width: 90px;
+    height: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    border: 2px solid black;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+.country-flag img {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+.country-info span:nth-child(1) {
+    margin-bottom: 10px;
+}
