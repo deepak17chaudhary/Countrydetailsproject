@@ -26,13 +26,11 @@
         Area: {{selectedCountry?.area}}
     </span>
         <span>
-        CountryCode: {{selectedCountry?.countrycode}}
+        CountryCode: {{selectedCountry?.callingCodes[0]}}
     </span>
+
         <span>
-        Languages: {{selectedCountry?.language}}
-    </span>
-        <span>
-        Currencies: {{selectedCountry?.countryObj?.currencies[0]?.name}}
+        Currencies: {{selectedCountry?.currencies[0]?.name}}
     </span>
         <span>
        Timezones: {{selectedCountry?.timezones}}
