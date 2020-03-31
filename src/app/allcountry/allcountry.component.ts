@@ -17,6 +17,7 @@ export class AllcountryComponent implements OnInit {
   get searchTerm(): string {
     return this._searchTerm;
   }
+
   set searchTerm(searchValue: string) {
     this._searchTerm = searchValue;
     this.filteredCountries = this.filteredCountriesData(searchValue);
@@ -29,6 +30,7 @@ export class AllcountryComponent implements OnInit {
      ) {
 
   }
+  
 
   ngOnInit() {
     
