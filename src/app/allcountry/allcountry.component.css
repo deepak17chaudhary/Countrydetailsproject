@@ -21,13 +21,16 @@ button {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
-li {
+li,
+.search-bar-container {
     display: flex;
-    border: 2px solid black;
+    border: 1px solid #d6d6d6;
     width: 500px;
     margin-bottom: 5px;
+    padding: 5px;
 }
 
 .country-flag img {
@@ -38,4 +41,8 @@ li {
 
 .country-info span:nth-child(1) {
     margin-bottom: 10px;
+}
+
+.details {
+    cursor: pointer;
 }

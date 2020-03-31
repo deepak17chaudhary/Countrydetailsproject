@@ -2,8 +2,11 @@
     <h1>
         Countries
     </h1>
+    <!-- <div class="search-bar-container"> -->
+    <input type="text" name="search bar" [disabled]="!(countryListData?.length)" [(ngModel)]="searchTerm" class="search-bar-container" placeholder="Search countries" />
+    <!-- </div> -->
     <ul>
-        <li *ngFor="let countryObj of countryListData">
+        <li *ngFor="let countryObj of filteredCountries">
             <div class="country-flag">
                 <img src="{{countryObj?.flag}}" alt="flag">
             </div>
@@ -14,11 +17,14 @@
 
                 <div class="buttons">
                     <button type="button">Showmap</button>
-                    <button (click)="redirectToCountryDetailInfo(countryObj)">Details</button>
+                    <button (click)="redirectToCountryDetailInfo(countryObj)" class="details">Details</button>
 
                 </div>
             </div>
         </li>
+        <mat-spinner *ngIf="showSpinner"></mat-spinner>
+        <div *ngIf="!(countryListData?.length) && !showSpinner">No data available</div>
+        <div *ngIf="!(filteredCountries?.length) && (countryListData?.length) && !showSpinner">No Search result found</div>
     </ul>
 
 </div>

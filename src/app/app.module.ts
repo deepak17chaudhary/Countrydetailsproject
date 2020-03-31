@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {CountrydataService } from './countrydata.service';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountrydeatilComponent } from './countrydeatil/countrydeatil.component';
 import { AllcountryComponent } from './allcountry/allcountry.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AllcountryComponent } from './allcountry/allcountry.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [CountrydataService],
   bootstrap: [AppComponent]
