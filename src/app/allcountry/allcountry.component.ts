@@ -50,8 +50,10 @@ export class AllcountryComponent implements OnInit {
   }
 
   printDate() {
+  
     return new Date();
   }
+
   filteredCountriesData(searchKey: string) {
     const afterFilterCountries =  _.filter(this.countryListData, (country) => {
     return country.name.toLowerCase().startsWith(searchKey.toLowerCase());
