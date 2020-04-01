@@ -13,6 +13,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e"
     },
+
     "resolutions": {
         "@babel/preset-env": "7.9.0"
     },
@@ -58,6 +59,9 @@
         "ts-node": "~7.0.0",
         "tslint": "~5.15.0",
         "typescript": "~3.5.3"
-    }
+    },
+
+    "plugins": "@babel/plugin-proposal-numeric-separator"
+
 
 }
