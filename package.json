@@ -13,6 +13,9 @@
         "lint": "ng lint",
         "e2e": "ng e2e"
     },
+    "resolutions": {
+        "@babel/preset-env": "7.9.0"
+    },
 
     "private": true,
     "dependencies": {
