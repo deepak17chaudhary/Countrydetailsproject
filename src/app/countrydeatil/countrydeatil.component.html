@@ -32,6 +32,12 @@
         <span>
         Currencies: {{selectedCountry?.currencies[0]?.name}}
     </span>
+        <span *ngIf="selectedCountry?.languages?.length">
+        Languages : 
+        <span *ngFor="let lang of selectedCountry?.languages; let index= index;">
+            {{lang?.name}} <span *ngIf="!(index === selectedCountry?.languages?.length-1)">&#44;</span>
+        </span>
+        </span>
         <span>
        Timezones: {{selectedCountry?.timezones}}
     </span>

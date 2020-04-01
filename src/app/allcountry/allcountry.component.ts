@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CountrydataService } from '../countrydata.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as _ from 'lodash';
+import * as  moment from 'moment';
 
 @Component({
   selector: 'app-allcountry',
@@ -49,9 +50,14 @@ export class AllcountryComponent implements OnInit {
     );
   }
 
-  printDate() {
   
-    return new Date();
+  printDate(timeZone :string) {
+    const timeZoneOfCountry = timeZone.replace('UTC', '');
+    const utcDate = moment().utcOffset(timeZoneOfCountry).format('Do MMMM YYYY, HH:mm');
+    return utcDate;
+
+  
+   
   }
 
   filteredCountriesData(searchKey: string) {
