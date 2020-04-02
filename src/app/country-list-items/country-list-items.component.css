@@ -1,0 +1,37 @@
+.country-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+
+button {
+    border: 1px solid blue;
+    color: blue;
+    width: 90px;
+    height: 40px;
+}
+
+.country-flag img {
+    width: 230px;
+    height: 140px;
+    margin: 10px;
+}
+
+.country-info span:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.country-info span {
+    font-size: 10px;
+}
+
+.details {
+    cursor: pointer;
+}

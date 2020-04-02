@@ -14,7 +14,9 @@ const routes: Routes = [
     path: 'countryDetail/:countryName',
     component: CountrydeatilComponent,
     pathMatch: 'full'
-  }
+  },
+  
+
 ];
 
 @NgModule({

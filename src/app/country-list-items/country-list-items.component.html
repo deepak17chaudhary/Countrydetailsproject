@@ -1,0 +1,16 @@
+<div class="country-details">
+    <div class="country-flag">
+        <img src="{{countryObj?.flag}}" alt="flag">
+    </div>
+    <div class="country-info">
+        <h4>{{countryObj?.name}}</h4>
+        <span>Currency: {{countryObj?.currencies[0]?.name}}</span> <br>
+        <span>Country date and Time : {{ printDate(countryObj?.timezones[0]) }}</span> <br>
+
+        <div class="buttons">
+            <button type="button">Showmap</button>
+            <button (click)="redirectToCountryDetailInfo(countryObj)" class="details">Details</button>
+
+        </div>
+    </div>
+</div>

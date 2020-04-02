@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {CountrydataService } from './countrydata.service';
 import { MatProgressSpinnerModule } from '@angular/material';
+import { AgGridModule} from 'ag-grid-angular';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,12 +12,14 @@ import { AppComponent } from './app.component';
 import { CountrydeatilComponent } from './countrydeatil/countrydeatil.component';
 import { AllcountryComponent } from './allcountry/allcountry.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CountryListItemsComponent } from './country-list-items/country-list-items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountrydeatilComponent,
-    AllcountryComponent
+    AllcountryComponent,
+    CountryListItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AgGridModule
   ],
   providers: [CountrydataService],
   bootstrap: [AppComponent]

@@ -124,5 +124,10 @@
       }
     }
   },
-  "defaultProject": "countrydetails"
+  "defaultProject": "countrydetails",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
