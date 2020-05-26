@@ -1,47 +1,69 @@
-<div class="container">
-    <div>
-        <h1>{{selectedCountry?.name}}</h1>
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>ReactJs</button>
+    <button mat-menu-item>VueJs</button>
+</mat-menu>
 
-        <span>
-        <img src="{{selectedCountry?.flag}}" alt="flag">
-    </span>
-    </div>
-    <div class="country-det">
-        <span>
+<button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+<div class="container">
+    <div class="country-info">
+        <div class="info">
+            <h1>
+                {{selectedCountry?.name}}
+            </h1>
+            <span>
+            <img src="{{selectedCountry?.flag}}" alt="flag" class="selected-country">
+            </span>
+        </div>
+        <div class="country-det">
+            <span>
         Native Name: {{selectedCountry?.nativeName}}
     </span>
-        <span>
+            <span>
         Capital: {{selectedCountry?.capital}}
     </span>
-        <span>
+            <span>
         Population: {{selectedCountry?.population}}
     </span>
-        <span>
+            <span>
         Region: {{selectedCountry?.region}}
     </span>
-        <span>
+            <span>
         Sub-region: {{selectedCountry?.subregion}}
     </span>
-        <span>
+            <span>
         Area: {{selectedCountry?.area}}
     </span>
-        <span>
+            <span>
         CountryCode: {{selectedCountry?.callingCodes[0]}}
     </span>
 
-        <span>
+            <span>
         Currencies: {{selectedCountry?.currencies[0]?.name}}
     </span>
-        <span *ngIf="selectedCountry?.languages?.length">
+            <span *ngIf="selectedCountry?.languages?.length">
         Languages : 
         <span *ngFor="let lang of selectedCountry?.languages; let index= index;">
             {{lang?.name}} <span *ngIf="!(index === selectedCountry?.languages?.length-1)">&#44;</span>
-        </span>
-        </span>
-        <span>
+            </span>
+            </span>
+            <span>
        Timezones: {{selectedCountry?.timezones}}
     </span>
-
+        </div>
+        <div class="neighbour">
+            <h2>Neighbour Countries</h2>
+            <ul *ngIf="neighbourCountriesList?.length">
+                <li *ngFor="let countryObj of neighbourCountriesList;" class="neighbour-country">
+                    <img src="{{countryObj?.flag}}" alt="countryObj.name">
+                    <!-- <span> {{countryObj?.name}}</span> -->
+                </li>
+            </ul>
+            <span *ngIf="!neighbourCountriesList?.length">No neighbour countries found</span>
+        </div>
     </div>
 
+</div>
+<div class="ag-grid-container">
+    <ag-grid-angular style="width:100%;height:280px; padding-top: 10px;" [animateRows]="true" class="ag-theme-balham" [rowData]="rowData | async " [columnDefs]="columnDefs" rowSelection="multiple"></ag-grid-angular>
 </div>

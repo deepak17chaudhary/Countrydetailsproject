@@ -45,3 +45,10 @@ countryObj;
       this.router.navigate(['/countryDetail/' + selectedCountry.name]); // 'countryDetail/india'
     }
 }
+
+
+
+
+
+
+
